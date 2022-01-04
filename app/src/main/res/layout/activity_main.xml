@@ -7,6 +7,13 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/btnTambah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="tambahHero"
+        android:text="Tambah Hero" />
+
     <ListView
         android:id="@+id/superListView"
         android:layout_width="match_parent"

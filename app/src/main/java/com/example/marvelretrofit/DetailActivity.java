@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.example.marvelretrofit.model.Superhero;
+
 public class DetailActivity extends AppCompatActivity {
 
     ImageView imageView;
@@ -26,7 +29,7 @@ public class DetailActivity extends AppCompatActivity {
         publisher = findViewById(R.id.publisher);
         bio = findViewById(R.id.bio);
 
-        System.out.println("Real name anu "+hero.toString());
+        Glide.with(this).load(hero.getImageurl()).into(imageView);
         name.setText(hero.getName());
         realName.setText(hero.getRealName());
         team.setText(hero.getTeam());

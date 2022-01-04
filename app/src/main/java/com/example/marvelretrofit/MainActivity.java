@@ -13,6 +13,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.marvelretrofit.model.Superhero;
+import com.example.marvelretrofit.service.RetrofitClient;
+
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -53,8 +56,8 @@ public class MainActivity extends AppCompatActivity {
 //Pass the drink the user clicks on to DrinkActivity
                                 Intent intent = new Intent(MainActivity.this,
                                         DetailActivity.class);
-                                Superhero paket = new Superhero("Dono","Anu","Tessy","889","Eyang Syubur","999","90","S");
-                                intent.putExtra("Superhero", paket);
+//                                Superhero paket = new Superhero("Dono","Anu","Tessy","889","Eyang Syubur","999","90","S");
+                                intent.putExtra("Superhero", myheroList.get(position));
                                 System.out.println("Nama anunya"+myheroList.get(position).getName());
                                 startActivity(intent);
                             }
@@ -69,5 +72,10 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+    }
+
+    public void tambahHero(View view) {
+        Intent intent = new Intent(this,TambahHeroActivity.class);
+        startActivity(intent);
     }
 }

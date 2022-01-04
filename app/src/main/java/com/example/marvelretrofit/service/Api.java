@@ -1,4 +1,6 @@
-package com.example.marvelretrofit;
+package com.example.marvelretrofit.service;
+
+import com.example.marvelretrofit.model.Superhero;
 
 import java.util.List;
 

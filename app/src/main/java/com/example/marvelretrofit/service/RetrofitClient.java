@@ -1,4 +1,4 @@
-package com.example.marvelretrofit;
+package com.example.marvelretrofit.service;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
